@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         mFindMusicButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String muzas = mLocationEditView.getText().toString();
+                String mac = mLocationEditView.getText().toString();
                 Intent intent = new Intent(MainActivity.this, GenresActivity.class);
-                intent.putExtra("muzas", muzas);
+                intent.putExtra("mac", mac);
                 startActivity(intent);
             }
         });

@@ -45,8 +45,8 @@ public class GenresActivity extends AppCompatActivity {
             });
 
             Intent intent = getIntent();
-            String muzas = intent.getStringExtra("muzas");
-            mLocationTextView.setText("Here are all the restaurants near: " + muzas);
+            String mac = intent.getStringExtra("mac");
+            mLocationTextView.setText("Here are all the restaurants near: " + mac);
         }
     }
 
