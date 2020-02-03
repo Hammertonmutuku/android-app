@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     EditText mLocationEditView;
     @BindView(R.id.appTextView)
     TextView mAppTextView;
+    @BindView(R.id.availableGenres)
+    Button mavailableGenres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
                 String mac = mLocationEditView.getText().toString();
                 Intent intent = new Intent(MainActivity.this, GenresActivity.class);
                 intent.putExtra("mac", mac);
+                startActivity(intent);
+            }
+        });
+        mavailableGenres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MusicActivity.class);
                 startActivity(intent);
             }
         });

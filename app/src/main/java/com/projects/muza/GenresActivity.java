@@ -19,14 +19,14 @@ public class GenresActivity extends AppCompatActivity {
         @BindView(R.id.LocationTextView) TextView mLocationTextView;
         @BindView(R.id.listView) ListView mListView;
 
-        private String[] muzas = new String[]{"Mi Mero Mole", "Mother's Bistro",
-                "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
-                "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
-                "Lardo", "Portland City Grill", "Fat Head's Brewery",
-                "Chipotle", "Subway"};
-        private String[] artist = new String[] {"Vegan Food", "Breakfast", "Fishs Dishs", "Scandinavian", "Coffee",
-                "English Food", "Burgers", "Fast Food", "Noodle Soups", "Mexican", "BBQ", "Cuban",
-                "Bar Food", "Sports Bar", "Breakfast", "Mexican" };
+        private String[] muzas = new String[]{"Bilando", "Good Doctor",
+                "Goodbye", "Screen Door", "Lucy", "Sweet At This",
+                "Sleeping Child", "Equinox", "Miss moving on", "Adriana",
+                "Lucky", "Port", "Good old friend",
+                "Somebody to love", "Someone"};
+        private String[] artist = new String[] {"Ariana grande", "Nicky Minaj", "one Direction", "Weekend", "Cameroon",
+                "Swidish house mafia", "Bang beng", "Moving fast", "Out of my league", "Panic at the Disco", "Brown n q", "Cuba air",
+                "Banned at the Disco", "Sports house", "Eminem", "good" };
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {

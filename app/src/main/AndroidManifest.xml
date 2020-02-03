@@ -15,6 +15,9 @@
                 android:value="com.projects.muza.MainActivity">
             </meta-data>
         </activity>
+        <activity android:name=".MusicActivity">
+:
+        </activity>
         <activity android:name=".MainActivity">
 
             <intent-filter>

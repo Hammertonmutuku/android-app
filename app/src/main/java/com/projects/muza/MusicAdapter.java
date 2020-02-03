@@ -10,7 +10,8 @@ import android.widget.TextView;
 public class MusicAdapter extends BaseAdapter {
     private Context mContext;
     private String[] mLetters;
-    public MusicAdapter (Context context, String[] letters){
+
+    public MusicAdapter(Context context, String[] letters) {
         this.mContext = context;
         this.mLetters = letters;
     }
@@ -19,14 +20,17 @@ public class MusicAdapter extends BaseAdapter {
     public int getCount() {
         return mLetters.length;
     }
+
     @Override
     public Object getItem(int position) {
         return null;
     }
+
     @Override
     public long getItemId(int position) {
         return 0;
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) mContext
@@ -34,7 +38,7 @@ public class MusicAdapter extends BaseAdapter {
         View gridView;
         if (convertView == null) {
             // get layout from xml file
-            gridView = inflater.inflate(R.layout.music, null);
+            gridView = inflater.inflate(R.layout.music_grid_item, null);
             // pull views
             TextView letterView = (TextView) gridView
                     .findViewById(R.id.grid_item_letter);

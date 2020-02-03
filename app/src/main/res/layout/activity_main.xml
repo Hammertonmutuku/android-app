@@ -47,4 +47,13 @@
         android:layout_marginBottom="25dp"
         android:text="Find music" />
 
+    <Button
+        android:id="@+id/availableGenres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/findMusicButton"
+        android:layout_marginBottom="100dp"
+        android:text="see Available Genres" />
+
 </RelativeLayout>

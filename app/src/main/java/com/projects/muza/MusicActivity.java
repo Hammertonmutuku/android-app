@@ -5,7 +5,7 @@ import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Music extends AppCompatActivity {
+public class MusicActivity extends AppCompatActivity {
     GridView gridView;
     String[] letters = new String[] {
             "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
@@ -14,6 +14,8 @@ public class Music extends AppCompatActivity {
     protected void onCreate(Bundle  savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music_grid_item);
+        gridView = (GridView) findViewById(R.id.baseGridView);
+        gridView.setAdapter(new MusicAdapter(this, letters));
     }
 }
 
