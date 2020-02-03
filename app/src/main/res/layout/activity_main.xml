@@ -19,16 +19,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/LocationTextView"
-        android:layout_above="@+id/findRestaurantsButton"
+        android:layout_above="@+id/findMusicButton"
         android:layout_marginBottom="20dp"
         android:padding="5dp"
         android:textColor="#FFF"
         android:textSize="24sp"
-        android:hint="Enter Zip Code"
+        app:fontFamily="@font/arapey_italic"
+        android:hint="Enter music genre"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/findRestaurantsButton"
+        android:id="@+id/findMusicButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
