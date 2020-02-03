@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 
 
 public class GenresActivity extends AppCompatActivity {
-    public class RestaurantsActivity extends AppCompatActivity {
+
         @BindView(R.id.LocationTextView) TextView mLocationTextView;
         @BindView(R.id.listView) ListView mListView;
 
@@ -24,7 +24,9 @@ public class GenresActivity extends AppCompatActivity {
                 "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
                 "Lardo", "Portland City Grill", "Fat Head's Brewery",
                 "Chipotle", "Subway"};
-
+        private String[] artist = new String[] {"Vegan Food", "Breakfast", "Fishs Dishs", "Scandinavian", "Coffee",
+                "English Food", "Burgers", "Fast Food", "Noodle Soups", "Mexican", "BBQ", "Cuban",
+                "Bar Food", "Sports Bar", "Breakfast", "Mexican" };
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class GenresActivity extends AppCompatActivity {
             ButterKnife.bind(this);
 
 
-            ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, muzas);
+            MyMusicArrayAdapter adapter = new MyMusicArrayAdapter(this, android.R.layout.simple_list_item_1, muzas, artist);
             mListView.setAdapter(adapter);
 
             mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -50,4 +52,4 @@ public class GenresActivity extends AppCompatActivity {
         }
     }
 
-}
+
