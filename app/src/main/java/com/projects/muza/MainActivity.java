@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mavailableGenres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MusicActivity.class);
+                Intent intent = new Intent(MainActivity.this, GenresActivity.class);
                 startActivity(intent);
             }
         });
