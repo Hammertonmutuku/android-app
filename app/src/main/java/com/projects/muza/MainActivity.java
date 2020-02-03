@@ -8,33 +8,33 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.Button;
 import android.view.View;
+import android.widget.TextView;
+
 import butterknife.BindView;
-import butterknife.Butterknife;
+import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.findMusicButton) Button mFindMusicButton;
-
-
-    //private Button mFindMusicButton;
-    //private EditText mLocationEditView;
-    //public static final String TAG = MainActivity.class.getSimpleName();
+    @BindView(R.id.findMusicButton)
+    Button mFindMusicButton;
+    @BindView(R.id.LocationEditView)
+    EditText mLocationEditView;
+    @BindView(R.id.appTextView)
+    TextView mAppTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mLocationEditView = (EditText) findViewById(R.id.LocationEditView);
-        mFindMusicButton = (Button)findViewById(R.id.findMusicButton);
+
         mFindMusicButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-                public void onClick(View v) {
-            String location = mLocationEditView.getText().toString();
-            Log.d(TAG, location);
-            Intent intent = new Intent(MainActivity.this, GenresActivity.class);
-            startActivity(intent);
-        }
-
-        }
+            @Override
+            public void onClick(View v) {
+                String muzas = mLocationEditView.getText().toString();
+                Intent intent = new Intent(MainActivity.this, GenresActivity.class);
+                intent.putExtra("muzas", muzas);
+                startActivity(intent);
+            }
+        });
     }
-
+}

@@ -10,11 +10,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class GenresActivity extends AppCompatActivity {
     public class RestaurantsActivity extends AppCompatActivity {
-        private ListView mListView;
-        private TextView mLocationTextView;
+        @BindView(R.id.LocationTextView) TextView mLocationTextView;
+        @BindView(R.id.listView) ListView mListView;
+
         private String[] muzas = new String[]{"Mi Mero Mole", "Mother's Bistro",
                 "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
                 "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
@@ -26,24 +30,23 @@ public class GenresActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_genres);
+            ButterKnife.bind(this);
 
-            mListView = (ListView) findViewById(R.id.listView);
-            mLocationTextView = (TextView) findViewById(R.id.LocationTextView);
 
             ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, muzas);
             mListView.setAdapter(adapter);
 
             mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long 1) {
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     String muzas = ((TextView) view).getText().toString();
                     Toast.makeText(GenresActivity.this, muzas, Toast.LENGTH_LONG).show();
                 }
             });
 
             Intent intent = getIntent();
-            String muza = intent.getStringExtra("muza");
-            mLocationTextView.setText("Here are all the restaurants near: " + muza);
+            String muzas = intent.getStringExtra("muzas");
+            mLocationTextView.setText("Here are all the restaurants near: " + muzas);
         }
     }
 
