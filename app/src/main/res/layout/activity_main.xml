@@ -14,6 +14,19 @@
         android:text="Muza music"
         android:textSize="42sp"
         app:fontFamily="@font/arapey_italic" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LocationTextView"
+        android:layout_above="@+id/findRestaurantsButton"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        android:hint="Enter Zip Code"
+        android:layout_centerHorizontal="true" />
+
     <Button
         android:id="@+id/findRestaurantsButton"
         android:layout_width="wrap_content"
@@ -21,6 +34,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
+        app:fontFamily="@font/arapey_italic"
         android:layout_marginBottom="25dp"
-        android:text="Find Restaurants" />
+        android:text="Find music" />
 </RelativeLayout>
