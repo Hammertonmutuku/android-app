@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     private Button mFindMusicButton;
     private EditText mLocationEditView;
+    public static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         mFindMusicButton.setOnClickListener(new View.OnClickListener() {
         @Override
                 public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this, genresActivity.class);
+            String location = mLocationEditView.getText().toString();
+            Log.d(TAG, location);
+            Intent intent = new Intent(MainActivity.this, GenresActivity.class);
             startActivity(intent);
         }
 
