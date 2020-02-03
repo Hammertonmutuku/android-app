@@ -20,6 +20,7 @@
         android:layout_marginTop="25dp"
         android:text="Muza music"
         android:textSize="42sp"
+        android:textColor="#FFF"
         app:fontFamily="@font/arapey_italic" />
 
     <EditText
