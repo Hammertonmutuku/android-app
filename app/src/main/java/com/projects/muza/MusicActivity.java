@@ -1,5 +1,6 @@
 package com.projects.muza;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.GridView;
 
@@ -14,6 +15,7 @@ public class MusicActivity extends AppCompatActivity {
     protected void onCreate(Bundle  savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music_grid_item);
+        Intent intent = getIntent();
         gridView = (GridView) findViewById(R.id.baseGridView);
         gridView.setAdapter(new MusicAdapter(this, letters));
     }

@@ -3,38 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/music" />
+
     <TextView
         android:id="@+id/appTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:text="Muza music"
-        android:textSize="42sp"
         android:textColor="#FFF"
-        app:fontFamily="@font/arapey_italic" />
+        android:textSize="42sp"
+        app:fontFamily="@font/amarante" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/LocationEditView"
-        android:layout_above="@+id/findMusicButton"
-        android:layout_marginBottom="20dp"
         android:padding="5dp"
-        android:textColor="#FFF"
-        android:textSize="24sp"
-        app:fontFamily="@font/arapey_italic"
-        android:hint="Enter music genre"
-        android:layout_centerHorizontal="true" />
+        android:hint="Enter your location"
+        android:id="@+id/LocationText"
+        android:background="@color/colorTextIcons"
+        android:layout_margin="15dp"
+        android:layout_above="@id/findMusicButton"
+        android:layout_centerHorizontal="true"/>/>
 
     <Button
         android:id="@+id/findMusicButton"
@@ -43,17 +40,12 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
-        app:fontFamily="@font/arapey"
+        app:fontFamily="@font/amarante"
         android:layout_marginBottom="25dp"
         android:text="Find music" />
 
-    <Button
-        android:id="@+id/availableGenres"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/findMusicButton"
-        android:layout_marginBottom="100dp"
-        android:text="see Available Genres" />
+
+
+
 
 </RelativeLayout>

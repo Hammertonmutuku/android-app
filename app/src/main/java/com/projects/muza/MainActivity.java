@@ -16,12 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.findMusicButton)
     Button mFindMusicButton;
-    @BindView(R.id.LocationEditView)
+    @BindView(R.id.LocationText)
     EditText mLocationEditView;
     @BindView(R.id.appTextView)
     TextView mAppTextView;
-    @BindView(R.id.availableGenres)
-    Button mavailableGenres;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mavailableGenres.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, GenresActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
