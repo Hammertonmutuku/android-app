@@ -1,64 +1,35 @@
 package com.projects.muza.adapters;
 
-import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
+import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.projects.muza.R;
+import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.RecyclerHolder> {
 
-public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.MusicViewHolder> {
-    private List<Music> mRestaurants;
-    private Context mContext;
+    @NonNull
+    @Override
+    public RecyclerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return null;
+    }
 
-    public MusicListAdapter(Context context, List<Business> restaurants) {
-        mContext = context;
-        mRestaurants = restaurants;
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerHolder holder, int position, @NonNull List<Object> payloads) {
+        super.onBindViewHolder(holder, position, payloads);
+    }
 
-        @Override
-        public MusicListAdapter.MusicViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.restaurant_list_item, parent, false);
-            RestaurantViewHolder viewHolder = new RestaurantViewHolder(view);
-            return viewHolder;
-        }
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
 
-        @Override
-        public void onBindViewHolder(MusicListAdapter.RestaurantViewHolder holder, int position) {
-            holder.bindRestaurant(mRestaurants.get(position));
-        }
+    public class RecyclerHolder extends RecyclerView.ViewHolder {
 
-        @Override
-        public int getItemCount() {
-            return mRestaurants.size();
-        }
-
-        public class MusicViewHolder extends RecyclerView.ViewHolder {
-
-            @BindView(R.id.restaurantNameTextView)
-            TextView mNameTextView;
-            @BindView(R.id.categoryTextView)
-            TextView mCategoryTextView;
-            @BindView(R.id.ratingTextView)
-            TextView mRatingTextView;
-
-            private Context mContext;
-
-            public MusicViewHolder(View itemView) {
-                super(itemView);
-                ButterKnife.bind(this, itemView);
-                mContext = itemView.getContext();
-            }
-
-            public void bindRestaurant(Business restaurant) {
-                mNameTextView.setText(restaurant.getName());
-                mCategoryTextView.setText(restaurant.getCategories().get(0).getTitle());
-                mRatingTextView.setText("Rating: " + restaurant.getRating() + "/5");
-            }
+        public RecyclerMolder(@NonNull View itemView) {
+            super(itemView);
         }
     }
 }

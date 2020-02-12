@@ -2,6 +2,8 @@ package com.projects.muza;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     EditText mLocationEditView;
     @BindView(R.id.appTextView)
     TextView mAppTextView;
+    @BindView(R.id.recyclerView)
+    RecyclerView mrecyclerview;
 
 
     @Override
