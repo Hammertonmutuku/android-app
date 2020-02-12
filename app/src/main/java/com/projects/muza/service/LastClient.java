@@ -15,7 +15,7 @@ import static com.projects.muza.Constants.last_API_KEY_URL;
 public class LastClient {
     private static Retrofit retrofit = null;
 
-    public static lastClient getTrackInfo() {
+    public static Retrofit getTrackInfo() {
         if (retrofit == null) {
             OkHttpClient okHttpClient = new OkHttpClient.Builder()
                     .addInterceptor(new Interceptor() {
