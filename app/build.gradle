@@ -20,6 +20,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        it.buildConfigField 'String', 'last_API_KEY', last_API_KEY
     }
 }
 
